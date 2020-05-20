@@ -49,4 +49,31 @@ public class Snake {
     public void setTail(Deque tail) {
         this.tail = tail;
     }
+
+    public List<Movement> getActions() {
+        return actions;
+    }
+
+    public void setActions(List<Movement> actions) {
+        this.actions = actions;
+    }
+
+    public void move(Movement movement){
+        int x = posSnakehead.getX();
+        int y = posSnakehead.getY();
+        switch (movement.getDirection()){
+            case up:
+                posSnakehead = new Position(x,--y);
+                break;
+            case left:
+                posSnakehead = new Position(--x,y);
+                break;
+            case down:
+                posSnakehead = new Position(x,++y);
+                break;
+            case right:
+                posSnakehead = new Position(++x,y);
+                break;
+        }
+    }
 }
