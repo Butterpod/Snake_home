@@ -1,4 +1,4 @@
 package snake.model;
 
-public class Movement {
+public enum Position {
 }
