@@ -46,8 +46,6 @@ public class Main {
             setBackground(background,lenght,height,snake);
             printChar(background, lenght,height);
         }
-
-
     }
 
     public static void setBackground(char[][] background,int lenght,int height , Snake snake){
